@@ -2,9 +2,9 @@ import React from 'react';
 
 const Calculator = () => {
   return (
-    <div>
+    <h1>
       Calculator
-    </div>
+    </h1>
   );
 };
 
