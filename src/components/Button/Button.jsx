@@ -1,6 +1,17 @@
-const Button = () => {
+import styled from "styled-components";
+
+const Button = ({char}) => {
+
+  const StyledButton = styled.button`
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+  `
+
   return(
-    <button>7</button>
+    <StyledButton>
+      {char}
+    </StyledButton>
   )
 }
 
