@@ -5,6 +5,6 @@ import Calculator from "../components/Calculator";
 test('Calculator render', async () => {
   render(<Calculator />)
 
-  const heading = await screen.findByRole('heading')
-  expect(heading).toBeInTheDocument()
+  const calculator = await screen.findByLabelText('calculator')
+  expect(calculator).toBeInTheDocument()
 })

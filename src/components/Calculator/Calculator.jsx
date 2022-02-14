@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from "../Button";
+import {Section} from "../Styled/Section";
 
 const Calculator = () => {
   return (
-    <section>
+    <Section aria-label='calculator'>
       <Button text={2} onClick={() => console.log('test')} />
-    </section>
+    </Section>
   );
 };
 

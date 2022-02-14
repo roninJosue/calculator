@@ -8,7 +8,9 @@ export const lightTheme = {
   operatorButtonActiveBg: '#f9f8fc',
   equalButtonBg: '#266c88',
   equalButtonHoverBg: '#3b7993',
-  bodyBg: '#183153'
+  bodyBg: '#183153',
+  borderColor: '#444444',
+  borderButton: '#cccccc'
 }
 
 export const darkTheme = {
@@ -21,6 +23,8 @@ export const darkTheme = {
   operatorButtonActiveBg: '#28272d',
   equalButtonBg: '#6fc4d5',
   equalButtonHoverBg: '#67b3c3',
-  bodyBg: '#183153'
+  bodyBg: '#183153',
+  borderColor: '#444444',
+  borderButton: 'transparent'
   //bodyBg: '#08090A'
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import {render, screen} from "@testing-library/react"
+import {render, screen, fireEvent} from "@testing-library/react"
 import ThemeToggler from './../components/ThemeToggler'
 import {RecoilRoot} from "recoil";
 
@@ -11,10 +11,19 @@ describe('ThemeToggler', () => {
       </RecoilRoot>
     )
 
-    const buttonTheme = screen.getByRole('button', {
-      name: /light/i
-    })
+    const buttonTheme = screen.getByLabelText('theme-toggler')
 
     expect(buttonTheme).toBeInTheDocument()
+    expect(buttonTheme).toHaveClass('theme-dark')
+  })
+  test('click toggle button', () => {
+    render(<RecoilRoot>
+      <ThemeToggler />
+    </RecoilRoot>)
+
+    const buttonTheme = screen.getByLabelText('theme-toggler')
+    fireEvent.click(buttonTheme)
+
+    expect(buttonTheme).toHaveClass('theme-light')
   })
 })
