@@ -1,11 +1,21 @@
-import './App.css';
+import {useRecoilValue} from "recoil";
+import {GlobalStyles} from "./styles/GlobalStyles";
+import {ThemeProvider} from "styled-components";
+import themeAtom from "./recoil/theme/atom";
+import {darkTheme, lightTheme} from "./styles/theme";
 import Calculator from "./components/Calculator";
 
 function App() {
+  const theme = useRecoilValue(themeAtom)
+  const selectedTheme = theme === 'light' ? lightTheme : darkTheme
+
   return (
-    <div className="App">
-      <Calculator />
-    </div>
+    <ThemeProvider theme={selectedTheme}>
+      <GlobalStyles/>
+      <main>
+        <Calculator />
+      </main>
+    </ThemeProvider>
   );
 }
 

@@ -6,7 +6,8 @@ export const lightTheme = {
   operatorButtonBg: '#f9f9f9',
   operatorButtonHoverBg: '#faf4f6',
   equalButtonBg: '#266c88',
-  equalButtonHoverBg: '#3b7993'
+  equalButtonHoverBg: '#3b7993',
+  bodyBg: '#fff'
 }
 
 export const darkTheme = {
@@ -17,5 +18,6 @@ export const darkTheme = {
   operatorButtonBg: '#323232',
   operatorButtonHoverBg: '#3f3a3e',
   equalButtonBg: '#6fc4d5',
-  equalButtonHoverBg: '#67b3c3'
+  equalButtonHoverBg: '#67b3c3',
+  bodyBg: '#08090A'
 }

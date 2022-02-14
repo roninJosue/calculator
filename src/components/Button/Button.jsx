@@ -1,16 +1,13 @@
 import styled from "styled-components";
+import {StyledButton} from "../Styled/Button";
 
-const Button = ({char}) => {
-
-  const StyledButton = styled.button`
-    background-color: #61dafb;
-    color: #282c34;
-    border: none;
-  `
+const Button = ({text, onClick}) => {
 
   return(
-    <StyledButton>
-      {char}
+    <StyledButton
+      onClick={onClick}
+    >
+      {text}
     </StyledButton>
   )
 }
