@@ -5,7 +5,11 @@ import {RecoilRoot} from "recoil";
 
 describe('ThemeToggler', () => {
   test('render', () => {
-    render(<RecoilRoot><ThemeToggler /></RecoilRoot>)
+    render(
+      <RecoilRoot>
+        <ThemeToggler />
+      </RecoilRoot>
+    )
 
     const buttonTheme = screen.getByRole('button', {
       name: /light/i

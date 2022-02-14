@@ -4,6 +4,8 @@ import {ThemeProvider} from "styled-components";
 import themeAtom from "./recoil/theme/atom";
 import {darkTheme, lightTheme} from "./styles/theme";
 import Calculator from "./components/Calculator";
+import ThemeToggler from "./components/ThemeToggler";
+import {Main} from "./components/Styled/Main";
 
 function App() {
   const theme = useRecoilValue(themeAtom)
@@ -12,9 +14,10 @@ function App() {
   return (
     <ThemeProvider theme={selectedTheme}>
       <GlobalStyles/>
-      <main>
+      <Main>
+        <ThemeToggler />
         <Calculator />
-      </main>
+      </Main>
     </ThemeProvider>
   );
 }
