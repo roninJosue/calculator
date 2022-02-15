@@ -1,5 +1,5 @@
 import Button from "../Button";
-import styled from "styled-components";
+import {WrappedButtons} from "../Styled/WrappedButtons";
 
 const numbers = [
   {text: 7},
@@ -16,15 +16,9 @@ const numbers = [
   {text: '.'},
 ]
 
-const StyledNumbers = styled.div`
-  width: 230px;
-  display: flex;
-  flex-wrap: wrap;
-`
-
 const Numbers = () => {
   return (
-    <StyledNumbers>
+    <WrappedButtons>
       {numbers.map(number => (
         <Button
           key={number.text}
@@ -33,7 +27,7 @@ const Numbers = () => {
           onClick={() => console.log(number.text)}
         />
       ))}
-    </StyledNumbers>
+    </WrappedButtons>
   )
 }
 

@@ -5,7 +5,7 @@ const operators = [
   {text: '<-'},
   {text: '/'},
   {text: 'x'},
-  {text: '-'},
+  {text: '_'},
   {text: '+'},
   {text: '=', variant: 'equal'},
 ]

@@ -10,9 +10,9 @@ const Calculator = () => {
       <div style={{display: 'flex'}}>
         <div>
           <Functions />
-          <Numbers/>
+          <Numbers />
         </div>
-        <Operators/>
+        <Operators />
       </div>
     </Section>
   );

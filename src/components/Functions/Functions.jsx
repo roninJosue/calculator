@@ -1,5 +1,5 @@
 import Button from "../Button";
-import styled from "styled-components";
+import {WrappedButtons} from "../Styled/WrappedButtons";
 
 const functions = [
   {text: '%'},
@@ -10,19 +10,13 @@ const functions = [
   {text: 'sqrt'},
 ]
 
-const FunctionsStyled = styled.div`
-  display: flex;
-  width: 230px;
-  flex-wrap: wrap;
-`
-
 const Functions = () => {
   return (
-    <FunctionsStyled>
+    <WrappedButtons>
       {functions.map(func => (
         <Button key={func.text} text={func.text}/>
       ))}
-    </FunctionsStyled>
+    </WrappedButtons>
   )
 }
 
