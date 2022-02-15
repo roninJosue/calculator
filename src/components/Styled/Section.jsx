@@ -2,7 +2,10 @@ import styled from "styled-components"
 import {transitionCSS} from "../../styles/utils";
 
 export const Section = styled.section`
-  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-width: auto;
   min-height: 500px;
   background-color: ${({theme}) => theme.calculatorBg};
   border: 1px solid ${({theme}) => theme.borderColor};

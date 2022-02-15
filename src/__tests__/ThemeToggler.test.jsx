@@ -5,11 +5,7 @@ import {RecoilRoot} from "recoil";
 
 describe('ThemeToggler', () => {
   test('render', () => {
-    render(
-      <RecoilRoot>
-        <ThemeToggler />
-      </RecoilRoot>
-    )
+    render(<ThemeToggler />, {wrapper: RecoilRoot})
 
     const buttonTheme = screen.getByLabelText('theme-toggler')
 
@@ -17,9 +13,7 @@ describe('ThemeToggler', () => {
     expect(buttonTheme).toHaveClass('theme-dark')
   })
   test('click toggle button', () => {
-    render(<RecoilRoot>
-      <ThemeToggler />
-    </RecoilRoot>)
+    render(<ThemeToggler />, {wrapper: RecoilRoot})
 
     const buttonTheme = screen.getByLabelText('theme-toggler')
     fireEvent.click(buttonTheme)

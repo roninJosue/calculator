@@ -1,11 +1,19 @@
 import React from 'react';
-import Button from "../Button";
 import {Section} from "../Styled/Section";
+import Numbers from "../Numbers";
+import Operators from "../Operators";
+import Functions from "../Functions";
 
 const Calculator = () => {
   return (
     <Section aria-label='calculator'>
-      <Button text={2} onClick={() => console.log('test')} />
+      <div style={{display: 'flex'}}>
+        <div>
+          <Functions />
+          <Numbers/>
+        </div>
+        <Operators/>
+      </div>
     </Section>
   );
 };

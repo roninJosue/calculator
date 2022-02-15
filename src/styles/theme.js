@@ -16,9 +16,9 @@ export const lightTheme = {
 export const darkTheme = {
   calculatorBg: '#202020',
   color: '#ffffff',
-  numberButtonBg: '#3b3b3b',
-  numberButtonHoverBg: '#323137',
-  operatorButtonBg: '#323232',
+  numberButtonBg: '#3b3a40',
+  numberButtonHoverBg: '#333138',
+  operatorButtonBg: '#333138',
   operatorButtonHoverBg: '#3f3a3e',
   operatorButtonActiveBg: '#28272d',
   equalButtonBg: '#6fc4d5',
