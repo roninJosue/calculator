@@ -26,5 +26,4 @@ export const darkTheme = {
   bodyBg: '#183153',
   borderColor: '#444444',
   borderButton: 'transparent'
-  //bodyBg: '#08090A'
 }
