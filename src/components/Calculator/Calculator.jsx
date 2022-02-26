@@ -1,19 +1,12 @@
-import React from 'react';
 import {Section} from "../Styled/Section";
-import Numbers from "../Numbers";
-import Operators from "../Operators";
-import Functions from "../Functions";
+import Pad from "../Pad";
+import Display from "../Display";
 
 const Calculator = () => {
   return (
     <Section aria-label='calculator'>
-      <div style={{display: 'flex'}}>
-        <div>
-          <Functions />
-          <Numbers />
-        </div>
-        <Operators />
-      </div>
+      <Display />
+      <Pad />
     </Section>
   );
 };

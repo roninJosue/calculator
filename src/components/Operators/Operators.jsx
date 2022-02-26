@@ -2,12 +2,12 @@ import Button from "../Button";
 import styled from "styled-components";
 
 const operators = [
-  {text: '<-'},
-  {text: '/'},
-  {text: 'x'},
-  {text: '_'},
-  {text: '+'},
-  {text: '=', variant: 'equal'},
+  {text: '<-', id: 'delete'},
+  {text: '/', id: 'divide'},
+  {text: 'x', id: 'multiply'},
+  {text: '-',id:'subtract'},
+  {text: '+', id: 'add'},
+  {text: '=', variant: 'equal', id: 'equals'},
 ]
 
 const StyledOperators = styled.div`
@@ -21,7 +21,8 @@ const Operators = () => {
     <StyledOperators>
       {operators.map(operator => (
         <Button
-          key={operator.text}
+          id={operator.id}
+          key={operator.id}
           text={operator.text}
           variant={operator.variant ?? 'operator'}
         />

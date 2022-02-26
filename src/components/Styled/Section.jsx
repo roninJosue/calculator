@@ -10,6 +10,6 @@ export const Section = styled.section`
   background-color: ${({theme}) => theme.calculatorBg};
   border: 1px solid ${({theme}) => theme.borderColor};
   border-radius: 10px;
-  padding: .325rem;
+  padding: .18rem;
   ${transitionCSS}
 `

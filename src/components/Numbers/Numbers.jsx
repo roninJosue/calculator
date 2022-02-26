@@ -2,18 +2,18 @@ import Button from "../Button";
 import {WrappedButtons} from "../Styled/WrappedButtons";
 
 const numbers = [
-  {text: 7},
-  {text: 8},
-  {text: 9},
-  {text: 4},
-  {text: 5},
-  {text: 6},
-  {text: 1},
-  {text: 2},
-  {text: 3},
-  {text: '+/-'},
-  {text: 0},
-  {text: '.'},
+  {text: 7, id:'seven'},
+  {text: 8, id:'eight'},
+  {text: 9, id:'nine'},
+  {text: 4, id:'four'},
+  {text: 5, id:'five'},
+  {text: 6, id:'six'},
+  {text: 1, id:'one'},
+  {text: 2, id:'two'},
+  {text: 3, id:'three'},
+  {text: '+/-', id:'change_sign'},
+  {text: 0, id: 'zero'},
+  {text: '.', id: 'decimal'},
 ]
 
 const Numbers = () => {
@@ -21,7 +21,8 @@ const Numbers = () => {
     <WrappedButtons>
       {numbers.map(number => (
         <Button
-          key={number.text}
+          id={number.id}
+          key={number.id}
           text={number.text}
           variant='number'
           onClick={() => console.log(number.text)}
