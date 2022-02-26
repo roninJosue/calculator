@@ -1,6 +1,10 @@
+import {StyledDisplay} from "../Styled/StyledDisplay"
+
 const Display = () => {
   return(
-    <h1 id='display'>0</h1>
+    <StyledDisplay id='display'>
+      225
+    </StyledDisplay>
   )
 }
 
