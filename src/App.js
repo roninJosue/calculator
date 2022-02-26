@@ -1,4 +1,4 @@
-import {useRecoilValue} from "recoil";
+import {RecoilRoot, useRecoilValue} from "recoil";
 import {GlobalStyles} from "./styles/GlobalStyles";
 import {ThemeProvider} from "styled-components";
 import themeAtom from "./recoil/theme/atom";
@@ -15,8 +15,8 @@ function App() {
     <ThemeProvider theme={selectedTheme}>
       <GlobalStyles/>
       <Main>
-        <ThemeToggler />
-        <Calculator />
+        <ThemeToggler/>
+        <Calculator/>
       </Main>
     </ThemeProvider>
   );
