@@ -5,19 +5,18 @@ import {
   StyledFormula,
   StyledResult
 } from "../Styled/StyledDisplay"
-import {formula, result} from "../../recoil/calculator/atom";
+import {calculator} from "../../recoil/calculator/atom";
 
 const Display = () => {
-  const formulaValue = useRecoilValue(formula)
-  const resultValue = useRecoilValue(result)
+  const {formula, result} = useRecoilValue(calculator)
 
   return(
     <StyledDisplay id='display'>
       <StyledFormula>
-        {formulaValue}
+        {formula}
       </StyledFormula>
-      <StyledResult>
-        {resultValue}
+      <StyledResult len={result.length}>
+        {result}
       </StyledResult>
     </StyledDisplay>
   )

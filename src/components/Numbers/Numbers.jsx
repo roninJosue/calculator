@@ -1,5 +1,7 @@
 import Button from "../Button";
 import {WrappedButtons} from "../Styled/WrappedButtons";
+import {useSetRecoilState} from "recoil";
+import {numberSelector} from "../../recoil/calculator/selectors";
 
 const numbers = [
   {text: 7, id:'seven'},
@@ -17,6 +19,8 @@ const numbers = [
 ]
 
 const Numbers = () => {
+  const numbersFunc = useSetRecoilState(numberSelector)
+
   return (
     <WrappedButtons>
       {numbers.map(number => (
@@ -25,7 +29,7 @@ const Numbers = () => {
           key={number.id}
           text={number.text}
           variant='number'
-          onClick={() => console.log(number.text)}
+          onClick={() => numbersFunc(number.text)}
         />
       ))}
     </WrappedButtons>

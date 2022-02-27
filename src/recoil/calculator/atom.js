@@ -1,11 +1,9 @@
 import {atom} from 'recoil'
 
-export const formula = atom({
-  key: 'formula',
-  default: '4+5='
-})
-
-export const result = atom({
-  key: 'result',
-  default: 9
+export const calculator = atom({
+  key: 'calculator',
+  default: {
+    formula: '',
+    result: '0'
+  }
 })

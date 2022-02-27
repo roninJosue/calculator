@@ -13,6 +13,10 @@ export const StyledFormula = styled.div`
 `
 
 export const StyledResult = styled.div`
-  font-size: 2.8rem;
+  font-size: ${({len}) => {
+    console.log(len)
+    if (len < 10) return '2.8rem'
+    return len < 15 ? '2rem' : '1rem'
+  }};
   font-weight: 500;
 `
