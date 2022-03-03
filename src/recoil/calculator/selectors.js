@@ -18,3 +18,11 @@ export const numberSelector = selector({
     )
   }
 })
+
+export const operatorSelector = selector({
+  key: 'operatorSelector',
+  get: ({get}) => {},
+  set: ({set, get}) => {
+
+  }
+})
