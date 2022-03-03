@@ -1,14 +1,15 @@
 // todo if length === 1, and button pressed is 0, do nothing
 export const validateDigit = (expression, digit) => {
-  //debugger;
-  if (expression.length === 1 && digit === 0) {
-    return ''
+  if (isNaN(digit)) {
+    return digit === '.' ? isDot(digit, expression) : (Number(expression) * -1).toString()
+  } else {
+    return Number(`${expression}${digit}`).toString()
   }
+}
 
-  const firstChar = expression.charAt(0)
-  if (expression.length === 1 && digit !== 0 && firstChar === '0') {
-    return `${expression.substring(1)}${digit}`
-  }
+const isDot = (dot, expression) => {
+  const hasDot = (expression.match(/\./g) || []).length
+  if (hasDot > 0) return ''
 
-  return `${expression}${digit}`
+  return `${expression}${dot}`
 }
