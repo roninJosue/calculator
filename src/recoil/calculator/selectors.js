@@ -22,7 +22,15 @@ export const numberSelector = selector({
 export const operatorSelector = selector({
   key: 'operatorSelector',
   get: ({get}) => {},
-  set: ({set, get}) => {
+  set: ({set, get}, value) => {
+    console.log(value)
+  }
+})
 
+export const functionSelector = selector({
+  key: 'functionSelector',
+  get: () => {},
+  set: ({set, get}, value) => {
+    console.log(value)
   }
 })
