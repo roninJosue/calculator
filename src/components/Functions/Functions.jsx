@@ -1,5 +1,7 @@
 import Button from "../Button";
 import {WrappedButtons} from "../Styled/WrappedButtons";
+import {useSetRecoilState} from "recoil";
+import {functionSelector} from "../../recoil/calculator/selectors";
 
 const functions = [
   {text: '%', id: 'percentage'},
@@ -11,10 +13,16 @@ const functions = [
 ]
 
 const Functions = () => {
+  const func = useSetRecoilState(functionSelector)
   return (
     <WrappedButtons>
-      {functions.map(func => (
-        <Button id={func.id} key={func.id} text={func.text}/>
+      {functions.map(f => (
+        <Button
+          key={f.id}
+          id={f.id}
+          text={f.text}
+          onClick={() => func(f.text)}
+        />
       ))}
     </WrappedButtons>
   )

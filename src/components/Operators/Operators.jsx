@@ -1,5 +1,7 @@
 import Button from "../Button";
 import styled from "styled-components";
+import {useSetRecoilState} from "recoil";
+import {operatorSelector} from "../../recoil/calculator/selectors";
 
 const operators = [
   {text: '<-', id: 'delete'},
@@ -17,6 +19,7 @@ const StyledOperators = styled.div`
 `
 
 const Operators = () => {
+  const operatorFun = useSetRecoilState(operatorSelector)
   return (
     <StyledOperators>
       {operators.map(operator => (
@@ -25,6 +28,7 @@ const Operators = () => {
           key={operator.id}
           text={operator.text}
           variant={operator.variant ?? 'operator'}
+          onClick={() => operatorFun(operator.text)}
         />
       ))}
     </StyledOperators>
