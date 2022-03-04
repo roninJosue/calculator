@@ -12,7 +12,5 @@ export const validateDigit = (expression, digit) => {
 
 const isDot = (dot, expression) => {
   const hasDot = (expression.match(/\./g) || []).length
-  if (hasDot > 0) return ''
-
-  return `${expression}${dot}`
+  return hasDot > 0 ? expression : `${expression}${dot}`
 }
