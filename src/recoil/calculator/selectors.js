@@ -1,5 +1,5 @@
 import {selector} from "recoil";
-import {calculator} from "./atom";
+import {calculator, defaultValue} from "./atom";
 import {validateDigit} from "../../utils/numbers";
 
 export const numberSelector = selector({
@@ -32,5 +32,8 @@ export const functionSelector = selector({
   get: () => {},
   set: ({set, get}, value) => {
     console.log(value)
+    if (value === 'clear') {
+      set(calculator, defaultValue)
+    }
   }
 })

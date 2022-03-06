@@ -21,7 +21,7 @@ const Functions = () => {
           key={f.id}
           id={f.id}
           text={f.text}
-          onClick={() => func(f.text)}
+          onClick={() => func(f.id)}
         />
       ))}
     </WrappedButtons>

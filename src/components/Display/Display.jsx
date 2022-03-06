@@ -1,5 +1,4 @@
 import {useRecoilValue} from "recoil";
-
 import {
   StyledDisplay,
   StyledFormula,
@@ -11,11 +10,14 @@ const Display = () => {
   const {formula, result} = useRecoilValue(calculator)
 
   return(
-    <StyledDisplay id='display'>
+    <StyledDisplay>
       <StyledFormula>
         {formula}
       </StyledFormula>
-      <StyledResult len={result.length}>
+      <StyledResult
+        len={result.length}
+        id='display'
+      >
         {result}
       </StyledResult>
     </StyledDisplay>

@@ -14,5 +14,6 @@ const isDot = (dot, expression) => {
 }
 
 const preventLeadingZeros = (expression) => {
+  console.log(expression)
   return expression.replaceAll(/^0+(?!$)/ig, '')
 }
