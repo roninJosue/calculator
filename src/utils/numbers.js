@@ -1,4 +1,5 @@
 // TODO extract negate number operation to another function
+// TODO review preventLeadingZeros function
 export const validateDigit = (expression, digit) => {
   if (isNaN(digit)) {
     return digit === '.' ?
