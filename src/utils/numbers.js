@@ -1,10 +1,11 @@
+// TODO extract negate number operation to another function
 export const validateDigit = (expression, digit) => {
   if (isNaN(digit)) {
     return digit === '.' ?
       isDot(digit, expression) :
       (Number(expression) * -1).toString()
   } else {
-    return preventLeadingZeros(`${expression}${digit}`)
+    return preventLeadingZeros(`${digit}`)
   }
 }
 
@@ -14,6 +15,5 @@ const isDot = (dot, expression) => {
 }
 
 const preventLeadingZeros = (expression) => {
-  console.log(expression)
   return expression.replaceAll(/^0+(?!$)/ig, '')
 }
