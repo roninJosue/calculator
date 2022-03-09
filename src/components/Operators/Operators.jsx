@@ -6,7 +6,7 @@ import {operatorSelector} from "../../recoil/calculator/selectors";
 const operators = [
   {text: '<-', id: 'delete'},
   {text: '/', id: 'divide'},
-  {text: 'x', id: 'multiply'},
+  {text: '*', id: 'multiply'},
   {text: '-',id:'subtract'},
   {text: '+', id: 'add'},
   {text: '=', variant: 'equal', id: 'equals'},

@@ -4,7 +4,7 @@ import {
   defaultValue, FUNCTION,
   NUMBER, OPERATOR
 } from "./atom";
-import {validateDigit} from "../../utils/numbers";
+import {preventLeadingZeros, validateDigit} from "../../utils/numbers";
 import {validateOperator} from "../../utils/operators";
 
 export const numberSelector = selector({
@@ -19,14 +19,13 @@ export const numberSelector = selector({
 
     let newResult = result
 
-    if (lastSectionClicked !== NUMBER) newResult = ''
+    if (lastSectionClicked !== NUMBER) newResult = '0'
 
     const valid = validateDigit(newResult, value)
-
     set(calculator,
       {
-        result: `${newResult}${valid}`,
-        formula: `${formula}${valid}`,
+        result: `${valid}`,
+        formula: preventLeadingZeros(`${formula}${value}`),
         lastSectionClicked: NUMBER
       }
     )
@@ -38,10 +37,10 @@ export const operatorSelector = selector({
   get: ({get}) => {},
   set: ({set, get}, value) => {
     const {result, formula} = get(calculator)
-    const op = validateOperator(value)
+    const op = validateOperator(formula, value)
     set(calculator, {
-      result: value,
-      formula: `${formula}${op}`,
+      result: op.resul,
+      formula: op.formula,
       lastSectionClicked: OPERATOR
     })
   }

@@ -6,15 +6,18 @@ export const validateDigit = (expression, digit) => {
       isDot(digit, expression) :
       (Number(expression) * -1).toString()
   } else {
-    return preventLeadingZeros(`${digit}`)
+    return preventLeadingZeros(`${expression}${digit}`)
   }
 }
 
-const isDot = (dot, expression) => {
+export const isDot = (dot, expression) => {
+  console.log(expression)
+  if (expression.length === 1 && expression !== '.') return `${expression}${dot}`
   const hasDot = (expression.match(/\./g) || []).length
   return hasDot > 0 ? expression : `${expression}${dot}`
 }
 
-const preventLeadingZeros = (expression) => {
-  return expression.replaceAll(/^0+(?!$)/ig, '')
+export const preventLeadingZeros = (expression) => {
+  console.log(expression.charAt(1))
+  return expression.charAt(1) !== '.' ? expression.replaceAll(/^0+(?!$)/ig, '') : expression
 }
