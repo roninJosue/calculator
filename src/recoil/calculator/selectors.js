@@ -25,7 +25,7 @@ export const numberSelector = selector({
 
     set(calculator,
       {
-        result: `${result}${valid}`,
+        result: `${newResult}${valid}`,
         formula: `${formula}${valid}`,
         lastSectionClicked: NUMBER
       }
