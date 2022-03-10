@@ -1,11 +1,15 @@
 import {selector} from "recoil";
 import {
   calculator,
-  defaultValue, FUNCTION,
-  NUMBER, OPERATOR
+  defaultValue
 } from "./atom";
 import {preventLeadingZeros, validateDigit} from "../../utils/numbers";
 import {validateOperator} from "../../utils/operators";
+import {
+  FUNCTION,
+  NUMBER,
+  OPERATOR
+} from "../../utils/constants";
 
 export const numberSelector = selector({
   key: 'numberSelector',

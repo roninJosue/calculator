@@ -1,8 +1,5 @@
 import {atom} from 'recoil'
-
-export const NUMBER = 'NUMBER'
-export const OPERATOR = 'OPERATOR'
-export const FUNCTION = 'FUNCTION'
+import {NUMBER} from "../../utils/constants";
 
 export const defaultValue = {
   formula: '',
