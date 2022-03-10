@@ -4,7 +4,8 @@ import {NUMBER} from "../../utils/constants";
 export const defaultValue = {
   formula: '',
   result: '0',
-  lastSectionClicked: NUMBER
+  lastSectionClicked: NUMBER,
+  evaluated: false
 }
 
 export const calculator = atom({

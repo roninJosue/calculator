@@ -40,11 +40,12 @@ export const operatorSelector = selector({
   key: 'operatorSelector',
   get: ({get}) => {},
   set: ({set, get}, value) => {
-    const {result, formula} = get(calculator)
-    const op = validateOperator(formula, value)
+    const {result, formula, evaluated} = get(calculator)
+    const op = validateOperator(formula, value, evaluated, result)
     set(calculator, {
       result: op.resul,
       formula: op.formula,
+      evaluated: op.evaluated,
       lastSectionClicked: OPERATOR
     })
   }
