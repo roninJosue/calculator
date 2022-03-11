@@ -1,7 +1,6 @@
 import {operators} from "./constants";
 
 export const validateOperator = (formula, operator, evaluated, result) => {
-  //console.log(formula, operator, evaluated, result)
   switch (operator) {
     case '+':
     case '-':
