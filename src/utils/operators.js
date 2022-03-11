@@ -44,7 +44,7 @@ const validateFormulaAndOperators = (formula, operator, lastChar) => {
   if (operator === minusOp) {
     return `${formula}${operator}`
   }
-  const removeLastChar = formula.slice(0, -2)
+  const removeLastChar = formula.slice(0, -1)
 
   return `${removeLastChar}${operator}`
 }
