@@ -55,7 +55,6 @@ export const functionSelector = selector({
   key: 'functionSelector',
   get: () => {},
   set: ({set, get}, value) => {
-    console.log(value)
     if (value === 'clear') {
       set(calculator, {...defaultValue, lastSectionClicked: FUNCTION})
     }
