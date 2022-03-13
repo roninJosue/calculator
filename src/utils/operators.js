@@ -20,7 +20,7 @@ export const validateOperator = (formula, operator, evaluated, result) => {
         formula: evaluated ? `${result}${operator}` : `${formula}`
       };
     case '=':
-      formula = formula.replaceAll(/\-\-/ig, '+')
+      formula = formula.replaceAll(/--/ig, '+')
       const res = eval(formula).toString()
 
       return {
@@ -44,7 +44,7 @@ const validateFormulaAndOperators = (formula, operator, lastChar) => {
     return `${formula}${operator}`
   }
 
-  const removeLastChar = `${formula}${operator}`.replaceAll(/(\-|\+|\*|\/){2,3}/ig, '')
+  const removeLastChar = `${formula}${operator}`.replaceAll(/(-|\+|\*|\/){2,3}/ig, '')
 
   return `${removeLastChar}${operator}`
 }

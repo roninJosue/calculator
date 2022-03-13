@@ -1,4 +1,4 @@
-import {RecoilRoot, useRecoilValue} from "recoil";
+import {useRecoilValue} from "recoil";
 import {GlobalStyles} from "./styles/GlobalStyles";
 import {ThemeProvider} from "styled-components";
 import themeAtom from "./recoil/theme/atom";
