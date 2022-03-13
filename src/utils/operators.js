@@ -21,6 +21,7 @@ export const validateOperator = (formula, operator, evaluated, result) => {
       };
     case '=':
       formula = formula.replaceAll(/--/ig, '+')
+      // eslint-disable-next-line no-eval
       const res = eval(formula).toString()
 
       return {
