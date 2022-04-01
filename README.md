@@ -45,6 +45,7 @@
 - [React](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev/)
 - [Styled Components](https://styled-components.com/)
+- [Recoil](https://recoiljs.org/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
