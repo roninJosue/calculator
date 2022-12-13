@@ -3,6 +3,7 @@
 <h1 align="center">JavaScript Calculator</h1>
 
 <div align="center">
+
    Solution for Front End Development Libraries project.
 </div>
 
